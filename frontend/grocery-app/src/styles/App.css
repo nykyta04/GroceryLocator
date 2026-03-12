@@ -1,0 +1,626 @@
+:root{
+  --accent: rgb(147, 230, 255);
+  --accent-light: rgb(197, 241, 254);
+  --accent-white: rgb(235, 250, 255);
+  --dark: rgb(23, 32, 98);
+  --dark-light: rgb(36, 47, 133);
+}
+
+/*Item Feedback*/
+.feedback {
+  margin: 8px 5px 12px;
+  padding: 8px 10px;
+  border: 1px solid #d6e9c6;
+  background: #eaf7e4;
+  color: #2f6b2f;
+  border-radius: 6px;
+  position: absolute;
+  width:90vw;
+}
+
+.feedback-close {
+  position: absolute;
+  right: 8px;
+  top: 4px;
+  border: none;
+  background: none;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/*Navbar*/
+.navbar {
+  margin: 0;
+  background-color: var(--accent);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   min-height: 64px;
+}
+
+.navbar img{
+  width: 2rem;
+  padding-bottom: 0.3rem;
+}
+
+.navbar ul{
+  margin: 0;
+  display:flex;
+  list-style: none;
+  justify-self: right;
+  align-items: center;
+}
+
+.navbar li {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  text-align: center;
+}
+
+.navbar-link{
+  width: 10vw;
+  text-wrap: pretty;
+  align-self: center;
+  height: stretch;
+}
+
+.navbar-link a{
+  display: block;
+  height: stretch;
+  color: black;
+  text-decoration: none;
+  padding: 0;
+}
+
+.navbar-link:hover{
+  background-color: var(--accent-light);
+}
+
+/*Search Area*/
+.search-area{
+  display: flex;
+  flex-direction: column;
+}
+
+/*Search Bar*/
+.search-bar{
+  display: block;
+  margin: 0 auto;
+  margin-top: 3rem;
+  width: 50vw;
+  height: 10vh;
+  border-radius: 10px;
+}
+
+/*Search Items*/
+.search-item-container, .list-item-container{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 45vw;
+}
+
+
+.search-item, .list-item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 2px solid black;
+  border-top: 0;
+  background-color: var(--accent-white);
+}
+
+
+.search-item p, .list-item p{padding: 0 3px;}
+
+.search-item button, .list-item button, .settings-btn{
+  display: block;
+  margin: auto 5%;
+  height: 5vh;
+  width: 8vh;
+  border: 0;
+  background-color: var(--dark);
+  border-radius: 10px;
+  color: white;
+  font-size: x-large;
+}
+
+.settings-btn{
+  font-size: small;
+  width:fit-content;
+  font-weight: 600;
+}
+
+.search-item button:hover, .list-item button:hover, .settings-btn:hover {
+  background-color: var(--dark-light);
+}
+
+/*List Items*/
+
+.list-item-container h2{
+  text-align: center;
+}
+
+.list-item{
+  border: 2px black solid;
+  margin: 5px;
+}
+
+.list-item button{
+  font-size: small;
+}
+
+.calculate-button{
+  display: block;
+  margin: 0.5rem auto;
+  border: 0;
+  padding: 5px;
+  background-color: var(--dark);
+  color: white;
+  font-size: x-large;
+}
+
+.calculate-button:hover {
+  background-color: var(--dark-light);
+}
+
+/*Settings menu*/
+
+.settings-menu {
+  background-color: var(--accent-light);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-checkbox-label{
+  display: inline-block;
+  padding: 1rem;
+  width: 15vw;
+}
+
+.settings-checkbox-label:hover{
+  background-color: var(--accent-white);
+}
+
+
+
+/* ==== ZIP CONTROLS ==== */
+.zip-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0px 10px;
+}
+
+/* badge appears only when zip exists */
+.zip-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: #eef7ff;
+  border: 1px solid #d7e8ff;
+  font-weight: 600;
+  color: #0d2c66;
+}
+
+.pin-img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  background: transparent;          
+}
+
+.zip-text {
+  letter-spacing: 0.2px;
+}
+
+/* tiny 'x' to clear */
+.chip-clear {
+  background: #edf3ff;
+  border: 1px solid #d7e8ff;
+  border-radius: 8px;
+  width: 22px;
+  height: 22px;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+  color: #0d2c66;
+  font-weight: 700;
+  padding: 0;
+}
+
+/* input + button */
+.zip-input.pretty {
+  background: #ffffff;
+  border: 1px solid #d7e8ff;
+  outline: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+  width: 110px;
+  font-weight: 600;
+  color: #0d2c66;
+}
+.zip-input.pretty:focus {
+  box-shadow: 0 0 0 3px rgba(13,44,102,0.12);
+  border-color: #95c1ff;
+}
+
+.btn-primary {
+  background: #162968;             
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.btn-primary:hover { filter: brightness(0.95); }
+
+.zip-error {
+  color: #b00020;
+  font-size: 0.85rem;
+  margin-left: 6px;
+}
+
+/* ===== View Total page (Best Deal) ===== */
+
+.view-total-page {
+  max-width: 960px;
+  margin: 40px auto 60px;   
+  padding: 0 16px;
+  text-align: center;       
+}
+
+/* Main title */
+.best-deal-title {
+  color: var(--dark);
+  font-weight: 800;
+}
+
+/* Winner card */
+.best-deal-card {
+  max-width: 640px;
+  background: var(--accent-white);
+  border-color: #d7e8ff;
+  border-radius: 18px;
+  box-shadow: 0 10px 26px rgba(9, 35, 70, 0.08);
+}
+
+/* Header strip  */
+.best-deal-header h2,
+.best-deal-header h5 {
+  color: var(--dark);        
+}
+
+/* Body of main card */
+.best-deal-body {
+  padding: 24px 24px 28px;
+  text-align: center;
+}
+
+/* Big price */
+.best-deal-price {
+  color: var(--dark-light);  
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+/* Address */
+.best-deal-address {
+  margin-bottom: 0;
+  color: #42526b;
+  
+}
+.view-total-page .best-deal-card {
+  max-width: 640px;
+  margin: 24px auto 0;   
+  float: none;
+}
+
+
+
+/* Other stores list */
+.other-stores-title {
+  color: #122044;
+  font-weight: 700;
+}
+
+.other-stores-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.other-store-col {
+  flex: 1 1 260px;
+  max-width: 300px;
+}
+
+.other-store-card {
+  border-radius: 14px;
+  border: 1px solid #e4eefc;
+  background: #ffffff;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.other-store-card:hover {
+  background: #f5f9ff;
+  box-shadow: 0 6px 18px rgba(9, 35, 70, 0.06);
+}
+
+.other-store-name {
+  font-weight: 700;
+  color: #122044;
+}
+
+.other-store-address {
+  color: #5e6c84;
+}
+
+.other-store-price {
+  color: var(--dark-light);  
+  font-weight: 700;
+}
+
+/* Back button + empty state */
+
+.total-back-btn {
+  border-radius: 10px;
+  border: 1px solid #d7e8ff;
+  background: #ffffff;
+  color: #0d2c66;
+  padding: 8px 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.total-back-btn:hover {
+  background: #eef5ff;
+}
+
+/* When no store has everything */
+.total-empty-card {
+  max-width: 600px;
+  margin: 60px auto 0;
+  padding: 24px 20px;
+  text-align: center;
+  border-radius: 14px;
+  border: 1px solid #d7e8ff;
+  background: #f5f9ff;
+}
+
+.total-empty-card h2 {
+  margin-bottom: 10px;
+  color: #122044;
+}
+
+.total-empty-card p {
+  margin-bottom: 18px;
+  color: #5e6c84;
+}
+
+/* Mobile tweaks */
+@media (max-width: 720px) {
+  .view-total-page {
+    padding: 0 12px 32px;
+  }
+
+  .best-deal-card {
+    border-radius: 16px;
+  }
+
+  .other-stores-list {
+    flex-direction: column;
+  }
+
+  .other-store-col {
+    max-width: 100%;
+  }
+
+  .best-deal-body {
+    text-align: center;
+  }
+}
+
+/* ===== Store Breakdown full page ===== */
+
+.store-breakdown-card-full {
+  max-width: 720px;
+  margin: 32px auto 48px;
+  padding: 24px 28px 32px;
+  background: var(--accent-white);
+  border-radius: 18px;
+  border: 1px solid #d7e8ff;
+  box-shadow: 0 10px 26px rgba(9, 35, 70, 0.08);
+}
+
+/* Title, store name, address, total */
+.store-breakdown-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+
+.store-breakdown-address {
+  text-align: center;
+  color: #42526b;
+  margin-bottom: 4px;
+}
+
+.store-breakdown-total {
+  text-align: center;
+  font-weight: 600;
+  color: var(--dark-light);
+  margin-top: 8px;
+  margin-bottom: 18px;
+}
+
+/* Table wrapper */
+.store-breakdown-table {
+  border-radius: 12px;
+  border: 1px solid #e4eefc;
+  overflow: hidden;
+  background: #ffffff;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+/* Header row */
+.sbt-head {
+  display: grid;
+  grid-template-columns: 1.6fr 0.8fr 1.3fr;
+  padding: 10px 16px;
+  background: var(--accent);
+  font-weight: 700;
+  color: #102347;
+}
+
+/* Data rows */
+.sbt-row {
+  display: grid;
+  grid-template-columns: 1.6fr 0.8fr 1.3fr;
+  padding: 8px 16px;
+  border-top: 1px solid #eef4ff;
+  align-items: center;
+}
+
+.sbt-row:nth-child(even) {
+  background: #f5f9ff;
+}
+
+/* Make price & availability readable */
+.sbt-row span:nth-child(2),
+.sbt-head span:nth-child(2),
+.sbt-row span:nth-child(3),
+.sbt-head span:nth-child(3) {
+  text-align: right;
+}
+
+.store-breakdown-card-full .total-back-btn {
+  margin-top: 20px;
+}
+
+
+
+/* ========== STORES PAGE STYLES ========== */
+
+/* Page Container */
+.stores-wrap {
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 16px 32px;
+}
+
+/* Title section  */
+.stores-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 6px;
+}
+.icon-title-small { width: 22px; height: 22px; object-fit: contain; }
+
+/* Spacing helpers for icons */
+ .mr4 { margin-right: 4px; }
+
+/* Controls (radius + store count) */
+.stores-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0 16px;
+}
+.radius-count { margin-left: auto; font-weight: 600; }
+
+/* Card base styles */
+.card {
+  border: 1px solid #e4eefc;
+  background: #f8fbff;
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 10px 0;
+}
+
+/* Closest Store block */
+.closest.card {
+  background: #eefaf1;               
+  border-color: #cfead7;
+}
+
+/* Layout for the closest store */
+.closest-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;     
+  width: 100%;
+  gap: 12px;
+}
+
+.closest-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.closest-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #51628d;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+}
+
+.closest-name { font-size: 18px; font-weight: 800; margin-top: 2px; }
+.closest-sub  { display: flex; align-items: center; gap: 6px; color: #2c3e50; }
+.closest-hours{ font-size: 12px; color: #51628d; margin-top: 4px; }
+
+/* Distance badge  */
+.closest-distance-badge {
+  margin-left: auto;                 
+  background: #e9fbef;
+  color: #197a3e;
+  border: 1px solid #bce8c5;
+  border-radius: 12px;
+  font-weight: 800;
+  padding: 10px 14px;
+  min-width: 84px;
+  text-align: center;
+  line-height: 1.1;
+}
+.closest-distance-badge span {
+  display: block;
+  margin-top: 2px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #2c6841;
+}
+
+/* Icons */
+.icon-lg { width: 32px; height: 32px; object-fit: contain; }
+.icon-sm { width: 14px; height: 14px; object-fit: contain; }
+
+/* Table (All Stores section) */
+.table { border: 1px solid #e4eefc; border-radius: 10px; overflow: hidden; background: #fff; }
+.thead, .trow { display: grid; grid-template-columns: 1.1fr 2fr .8fr .9fr; gap: 8px; }
+.thead { background: var(--accent); font-weight: 800; padding: 10px 12px; }
+.trow { padding: 10px 12px; border-top: 1px solid #eef4ff; align-items: center; }
+.trow.empty { text-align: center; color: #51628d; }
+.cell.name { font-weight: 700; }
+
+/* Responsive */
+@media (max-width: 720px) {
+  .closest-content { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .closest-distance-badge { align-self: flex-end; }
+  .thead, .trow { grid-template-columns: 1.4fr 2.2fr .9fr; }
+  .thead > :last-child, .trow > :last-child { display: none; }
+}
+
