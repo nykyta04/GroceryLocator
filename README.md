@@ -1,14 +1,4 @@
-# ITSC-4155-002-Team-9
 
-
-## Team Members (Group 9):
-Divine Mobote
-Wending Fang
-Giani Hill
-Nykyta Fedchenko
-Onyae' Stewart
-
----
 
 ## Description
 This project is a full-stack web application that allows users to compare grocery prices across multiple stores, view item availability, build a grocery list, and sort stores by total price.
